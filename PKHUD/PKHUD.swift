@@ -59,6 +59,10 @@ open class PKHUD: NSObject {
         return !window.isHidden
     }
     
+    open var containerView: UIView {
+        return window.frameView
+    }
+    
     open var contentView: UIView {
         get {
             return window.frameView.content
