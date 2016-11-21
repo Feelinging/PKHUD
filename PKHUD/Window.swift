@@ -45,7 +45,7 @@ internal class Window: UIWindow {
     
     internal func showFrameView() {
         //
-        if !(UIApplication.shared.keyWindow is Window) {
+        if UIApplication.shared.keyWindow != self {
             fromWindow = UIApplication.shared.keyWindow
         }
         
