@@ -45,7 +45,9 @@ internal class Window: UIWindow {
     
     internal func showFrameView() {
         //
-        fromWindow = UIApplication.shared.keyWindow
+        if !(UIApplication.shared.keyWindow is Window) {
+            fromWindow = UIApplication.shared.keyWindow
+        }
         
         //
         layer.removeAllAnimations()
